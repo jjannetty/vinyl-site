@@ -1,50 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>VINYL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
   <script type="text/javascript" src="scripts.js"></script>
 </head>
-<body id="body">
-<div id="sections">
-  <div class="section" data-background-color="#E02020">
-    <div class="canvas-wrapper">
-      <div class="canvas" style="background-image: url(https://images.unsplash.com/photo-1610328466269-1f36faad83c1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80);"></div>
+<body>
+  <div class="main">
+    <div class="hero">
+      <header>
+        <img class="logo" src="images/vinyl_logo.svg">
+      </header>
+      <div class="hero-image"></div>
+      <div class="partners">
+        <h2>Produced By:</h2>
+        <div class="partner-list">
+          <a class="partner" href="https://angel.co/lead/tj-mahony/vinyl/investments" target="_blank">TJ Mahony</a>
+          <a class="partner" href="https://angel.co/u/travis-lowry-2" target="_blank">Travis Kirk Lowry</a>
+          <a class="partner" href="https://angel.co/u/jfccohen#" target="_blank">Jake Cohen</a>
+        </div>
+      </div>
     </div>
-    <div class="content">
-      <h2>Pee Pee</h2>
-      <div class="divider"></div>
-
-      <p>A childish but common term for human urine. A childish but common name for a penis. A nickname for my dog.</p>
-
+    <div class="portfolio">
+      <ul class="portfolio-list">
+        <li class="portfolio-list-item">
+          <a class="portfolio-list-link" href="https://www.reactive.live/" target="_blank">
+            Reactive
+          </a>
+        </li>
+        <li class="portfolio-list-item">
+          <a class="portfolio-list-link" href="https://www.postscript.io/" target="_blank">
+            Postscript
+          </a>
+        </li>
+        <li class="portfolio-list-item">
+          <a class="portfolio-list-link" href="https://treat.xyz/" target="_blank">
+            Treat
+          </a>
+        </li>
+        <li class="portfolio-list-item">
+          <a class="portfolio-list-link" href="https://www.gordiansoftware.com/" target="_blank">
+            Gordian
+          </a>
+        </li>
+        <li class="portfolio-list-item">
+          <a class="portfolio-list-link" href="https://www.skipify.com/" target="_blank">
+            Skipify
+          </a>
+        </li>
+        <li class="portfolio-list-item">
+          <a class="portfolio-list-link" href="https://www.intelligems.io/" target="_blank">
+            Intelligems
+          </a>
+        </li>
+        <li class="portfolio-list-item">
+          <a class="portfolio-list-link" href="https://www.freshbooks.com/" target="_blank">
+            Freshbooks
+          </a>
+        </li>
+        <li class="portfolio-list-item">
+          <a class="portfolio-list-link" href="https://www.peelinsights.com/" target="_blank">
+            Peel
+          </a>
+        </li>
+      </ul>
+      <footer><span>56 Wareham Street, 3rd Floor.</span> <span>Boston Ma, 02118</span></footer>
     </div>
   </div>
-  <div class="section" data-background-color="#6236FF">
-    <div class="canvas-wrapper">
-      <div class="canvas" style="background-image: url(https://images.unsplash.com/photo-1570987656466-d3945eb0629b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80);"></div>
-    </div>
-    <div class="content">
-      <h2>Poo Poo</h2>
-      <div class="divider"></div>
-      <p>A childish but common term for human feces. A nickname for my dog.</p>
-    </div>
-  </div>
-  <div class="section" data-background-color="#E02020">
-    <div class="canvas-wrapper">
-      <div class="canvas" style="background-image: url(https://images.unsplash.com/photo-1618337069068-85558bafca00?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80);"></div>
-    </div>
-    <div class="content">
-      <h2>Pee Poo</h2>
-      <div class="divider"></div>
-      <p>A nickname for my dog.</p>
-    </div>
-  </div>
-</div>
-<div class="footer"></div>
 
 <script type="text/javascript">
   window.onload = (event) => {
-    clipScroll();
+    methodName();
   }
 </script>
 
