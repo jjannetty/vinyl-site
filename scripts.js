@@ -2,8 +2,16 @@ window.methodName = () => {
   let clients = document.getElementsByClassName('portfolio-list-link');
   let albums = document.getElementsByClassName('album');
   let overlay = document.querySelector('.overlay');
+  let portfolio = document.querySelector('.portfolio');
 
   overlay.addEventListener('click', () => {
+    let displayed = document.querySelector('.album.display');
+
+    overlay.classList.remove('display-flex')
+    displayed.classList.remove('display')
+  })
+
+  portfolio.addEventListener('click', () => {
     let displayed = document.querySelector('.album.display');
 
     overlay.classList.remove('display-flex')
