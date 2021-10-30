@@ -83,6 +83,10 @@ footer span {
   height: 100%;
 }
 
+.mobile-only {
+  display: none;
+}
+
 .overlay {
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
@@ -204,6 +208,10 @@ footer span {
     display: block;
   }
 
+  .mobile-only {
+    display: block;
+  }
+
   .hero {
     width: 100%;
     position: relative;
@@ -222,6 +230,10 @@ footer span {
     height: 192px;
   }
 
+  .overlay {
+    position: fixed;
+  }
+
   .partner {
     display: block;
     height: 46px;
@@ -231,6 +243,21 @@ footer span {
     width: 100%;
     padding: 72px 32px 32px 32px;
     align-items: stretch;
+  }
+
+  .portfolio-list-item {
+    align-items: center;
+    gap:  16px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-list-item img {
+    display: block;
+    width: 60px;
+    height: auto;
   }
 
   .portfolio-list-link {
