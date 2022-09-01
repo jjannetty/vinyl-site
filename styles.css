@@ -144,7 +144,7 @@ footer span {
 }
 
 .partners {
-  padding: 56px 60px 80px;
+  padding: 56px 60px 24px;
 }
 
 .portfolio {
@@ -155,6 +155,11 @@ footer span {
   width: 35%;
   padding: 52px 32px 52px 8%;
   align-items: stretch;
+  position: fixed;
+    bottom: 0;
+    right: 0;
+    top: 0;
+  overflow-y: scroll;
 }
 
 .portfolio-list {
@@ -254,6 +259,7 @@ footer span {
     width: 100%;
     padding: 72px 32px 32px 32px;
     align-items: stretch;
+    position: relative;
   }
 
   .portfolio-list-item {
