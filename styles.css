@@ -104,6 +104,7 @@ footer span {
     bottom: 0px;
     left: 0px;
     right:  0px;
+  z-index: 99;
 }
 
 .display {
@@ -215,7 +216,7 @@ footer span {
 
 /* Mobile Rules */
 
-@media (max-width: 414px) { 
+@media (max-width: 850px) { 
   .main {
     display: block;
   }

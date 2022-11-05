@@ -15,7 +15,7 @@ window.displayAlbum = () => {
   portfolio.addEventListener('click', () => {
     let windowWidth = window.innerWidth
 
-    if (windowWidth > 414) {
+    if (windowWidth > 850) {
       let displayed = document.querySelector('.album.display');
 
       overlay.classList.remove('display-flex')
@@ -30,7 +30,7 @@ window.displayAlbum = () => {
       let windowWidth = window.innerWidth
       let displayed = document.querySelector('.album.display');
 
-      if (windowWidth > 414) {
+      if (windowWidth > 850) {
         if (!displayed) {
           overlay.classList.add('display-flex')
         }
@@ -50,7 +50,7 @@ window.displayAlbum = () => {
       let windowWidth = window.innerWidth
       let displayed = document.querySelector('.album.display');
 
-      if (windowWidth <= 414) {
+      if (windowWidth <= 850) {
         if (!displayed) {
           overlay.classList.add('display-flex')
         }
