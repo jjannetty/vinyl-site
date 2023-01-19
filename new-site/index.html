@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>VINYL</title>
+  <meta name="description" content="Cuttin' checks, 50% off all term sheets! rock & roll">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2C068Z50Z1"></script>
+  <script>
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag(){dataLayer.push(arguments);}
+    // gtag('js', new Date());
+
+    // gtag('config', 'G-2C068Z50Z1');
+  </script>
+  <script type="module" src="toggle-overlay.js"></script>
+  <script type="module" src="album.js"></script>
+  <script type="module" src="porfolio.js"></script>
+  <script type="module" src="scripts.js"></script>
+</head>
+<body>
+  <main>
+    <div class="blur"></div>
+    <div class="grain"></div>
+    <img class="logo" src="images/vinyl_logo.svg" alt="Vinyl Logo">
+    <div class="record-player-container">
+      <div class="record-player-wrapper">
+        <img class="record-player" src="images/record-player@2x.png" />
+        <img class="power-light pulse" src="images/power-light.svg" />
+        <div class="power-button" onmouseenter="handleAboutHover()" onmouseleave="handleAboutHover()" onclick="toggleAbout()"></div>
+        <div class="record-player-text">
+          <span class="player-text word word-1">THE FUTURE</span>
+          <span class="player-text word word-2">OF BUYING</span>
+          <span class="player-text word word-3">THINGS</span>
+          <span class="player-text about hide">ABOUT</span>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="partners">
+        <h3>Produced By</h3>
+        <a class="partner" href="">TJ Mahony</a>
+        <a class="partner" href="">Travis Kirk Lowry</a>
+        <a class="partner" href="">Jake Cohen</a>
+      </div>
+    </div>
+    <div class="shelves">
+      <div class="shelves-top"></div>
+      <div class="shelves-side"></div>
+      <div class="shelf">
+        <div class="container">
+          <div class="overlay overlay-album">
+            <div class="arrow-button arrow-left put-back" onclick="toggleAlbum()">
+              <img src="images/arrow-left.svg" /> Put Back 
+            </div>
+          </div>
+        </div>
+        <div class="shelf-bottom shelf-bottom-1"></div>
+      </div>
+      <div class="shelf">
+        <div class="picture-frames">
+          <div class="picture-frame-container">
+            <div class="picture-background"></div>
+            <img class="picture-frame" src="images/frame-1.png" />
+          </div>
+          <div class="picture-frame-container">
+            <div class="picture-background"></div>
+            <img class="picture-frame" src="images/frame-2.png" />
+          </div>
+          <div class="picture-frame-container">
+            <div class="picture-background"></div>
+            <img class="picture-frame" src="images/frame-3.png" />
+          </div>
+        </div>
+        <div class="shelf-bottom shelf-bottom-2"></div>
+      </div>
+      <div class="shelf shelf-bottom"></div>
+    </div>
+  </main>
+  <div class="overlay overlay-about">
+    <div class="arrow-button arrow-left close-about" onclick="toggleAbout()">
+      <img src="images/arrow-left.svg" /> Put Back 
+    </div>
+    <div class="about-container">
+      <div class="about-content">
+        <p>
+          In August of 1994, the New York Times ran an article (in print, they did not have an online issue until 1996) titled “ Attention Shoppers: The Internet is Now Open”. The piece celebrated a seminal moment of the internet era — the first secure online purchase. A few kids in Nashua, New Hampshire hacked together an encryption technique that would allow the average joe to safely and securely purchase goods online.
+        </p>
+        <p>
+          So what was purchased that day? Of the millions of things we can now securely purchase online, what was the single item that Phil Brandenberger of Philadelphia purchased at 12:00pm on August 11, 1994?
+  He purchased music — a Sting album. Music started the digital overhaul of commerce.
+        </p>
+        <p>
+          Over the ages, music has been captured through an assortment of mediums — vinyl, 8-track cartridges, cassette tapes, compact discs, and MP3s et al. All, sans one, of those form factors are extinct or heading for extinction. Vinyl, the foundational medium of the first phonograph, is the oldest and most persistent form of capturing sound.
+        </p>
+        <p>
+          A purely analog technology, Vinyl is inferior to digital forms in endless respects; except one, fullness. Digital compression methods intentionally remove artifacts to ensure the cleanest output. Vinyl absorbs artifacts, capturing every sound that actually occurred during a recording. There is no compression algorithm, you can't make it smaller, and it doesn't sound like it came out of a computer….
+  Vinyl is real, tangible, tactile — it's the entirety of the experience.
+        </p>
+        <p>
+          TJ
+        </p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    window.onload = (event) => {
+      albums();
+    }
+  </script>
+</body>
+</html>
