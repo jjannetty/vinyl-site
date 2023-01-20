@@ -17,6 +17,8 @@ html {
 }
 
 html, body {
+  font-family: 'Unbounded', sans-serif;
+  color: #FFF;
   background-color: white;
   margin: 0;
   padding: 0;
@@ -156,6 +158,7 @@ main {
 }
 
 .logo {
+  margin: 0 16rem;
   max-width: 364rem;
   position: relative;
   z-index: 99;
@@ -164,11 +167,11 @@ main {
 .content {
   align-self: end;
   color: #FFF;
-  font-family: 'Unbounded', sans-serif;
 }
 
 h3 {
   font-size: 38rem;
+  text-transform: uppercase;
 }
 
 .partner {
@@ -328,7 +331,6 @@ h3 {
   transition-timing-function: ease-in-out;
 }
 .container {
-  font-family: 'Permanent Marker';
   display: flex;
     align-items: flex-end;
   padding: 16rem 80rem 0 54rem;
@@ -516,15 +518,15 @@ h3 {
 }
 
 .word-1 {
-  
+  animation-delay: 0.5s;
 }
 
 .word-2 {
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
 
 .word-3 {
-  animation-delay: 4s;
+  animation-delay: 4.5s;
 }
 
 .about {
@@ -532,6 +534,100 @@ h3 {
     top: 50%;
     left: 2rem;
   transform: translateY(-50%);
+}
+
+.mobile-only-block {
+  display: none;
+}
+
+.mobile-only-flex {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  h3 {
+    font-size: 20rem;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only-block {
+    display: block;
+  }
+
+  .mobile-only-flex {
+    display: flex;
+  }
+
+  main {
+    grid-template-columns: 18% 1fr;
+  }
+
+  .logo {
+    transform: rotate(-90deg) translateX(-25%);
+    width: 222rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 32rem 0rem 0 32rem;
+  }
+
+  .shelf-bottom, .shelves-top {
+    height: 43rem;
+  }
+
+  .shelves {
+    grid-template-columns: 43rem 1fr;
+  }
+
+  .album {
+    width: var(--album-dimensions);
+    height: var(--album-spine-width);
+    margin-bottom: 0rem;
+    position: relative;
+    transform-origin: top left;
+    transform: rotate3d(0, 1, 0, 90deg) rotateX(90deg) scale3d(1, 1, 1);
+  }
+
+  .album:nth-child(2n) {
+    margin-left: 4rem;
+  }
+
+  .album:nth-child(3n) {
+    margin-left: -2rem;
+  }
+
+  .album:nth-child(2n+7) {
+    margin-left: -12rem;
+  }
+
+  .album:nth-child(3n+12) {
+    margin-left: -5rem;
+  }
+
+  .record-player-container {
+    height: 264rem;
+    overflow: hidden;
+  }
+
+  .record-player-wrapper {
+    position: absolute;
+      bottom: 0;
+  }
+
+  .partner {
+    color: #FFF;
+    display: block;
+    font-size: 16rem;
+    text-decoration: none;
+    margin-bottom: 16rem;
+    width: fit-content;
+  }
 }
 
 @keyframes animate-flat {
