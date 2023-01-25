@@ -410,13 +410,21 @@ h3 {
 }
 
 .picture-background {
-  background: #FFF;
+  background-size: cover;
   position: absolute;
     top: 12%;
     bottom: 12%;
     right: 12%;
     left: 12%;
   z-index: 1;
+}
+
+.picture-background.tj {
+  background-image: url(images/tj-portrait.jpg);
+}
+
+.picture-background.travis {
+  background-image: url(images/travis-portrait.jpg);
 }
 
 .picture-frames {
