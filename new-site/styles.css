@@ -672,6 +672,7 @@ h3 {
     width: 80vw;
     height: 80vw; 
     left: 4vw;
+    transform-style: unset;
   }
 
   .animate-flat .record {
@@ -725,6 +726,10 @@ h3 {
     position: absolute;
     top: 60rem;
     transform: translate(20%, 0);
+  }
+
+  .grain {
+    opacity: 0;
   }
 }
 
