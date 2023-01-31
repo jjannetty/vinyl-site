@@ -16,12 +16,15 @@ const togglePowerIndicatorState = () => {
 }
 
 window.albums = () => {
+  const page = document.querySelector('.main')
   const shelf = document.querySelector('.container')
   portfolio.forEach((company, index) => {
     const Album = album(company, index)
 
     shelf.appendChild(Album)
   })
+
+  page.classList.add('visible')
 }
 
 window.toggleAlbum = () => {

@@ -67,12 +67,12 @@ export const album = (company, index) => {
   siteLink.innerHTML = 'Visit Site <img src="images/arrow-right.svg">'
 
   record.appendChild(siteLink)
-  spine.appendChild(albumName)
-  album.appendChild(spine)
-  album.appendChild(cover)
-  album.appendChild(record)
   album.appendChild(back)
   album.appendChild(bottom)
+  spine.appendChild(albumName)
+  album.appendChild(spine)
+  album.appendChild(record)
+  album.appendChild(cover)
 
   album.addEventListener('click', () => handleClick(album))
 

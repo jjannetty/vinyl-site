@@ -36,6 +36,12 @@ main {
   background-size: 646px;
   padding-top: 80rem;
   position: relative;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.visible {
+  opacity: 1;
 }
 
 .overlay {
@@ -203,7 +209,6 @@ h3 {
 .side {
   position: absolute;
   transition: transform 0.2s;
-  transform-style: preserve-3d;
 }
 .back {
   background: rgba(255, 0, 0, 0.5);
@@ -264,6 +269,7 @@ h3 {
   padding: 0 40rem;
   transform: translateZ(-10rem);
   z-index: 99;
+  transform-style: preserve-3d;
 }
 
 .arrow-button {
