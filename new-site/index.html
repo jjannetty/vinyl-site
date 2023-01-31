@@ -26,15 +26,17 @@
     <div class="grain"></div>
     <img class="logo" src="images/vinyl_logo.svg" alt="Vinyl Logo">
     <div class="record-player-container">
-      <div class="record-player-wrapper">
-        <img class="record-player" src="images/record-player@2x.png" />
-        <img class="power-light pulse" src="images/power-light.svg" />
-        <div class="power-button" onmouseenter="handleAboutHover()" onmouseleave="handleAboutHover()" onclick="toggleAbout()"></div>
-        <div class="record-player-text">
-          <span class="player-text word word-1">THE FUTURE</span>
-          <span class="player-text word word-2">OF BUYING</span>
-          <span class="player-text word word-3">THINGS</span>
-          <span class="player-text about hide">ABOUT</span>
+      <div class="record-player-clip">
+        <div class="record-player-wrapper">
+          <img class="record-player" src="images/record-player@2x.png" />
+          <img class="power-light pulse desktop-only" src="images/power-light.svg" />
+          <div class="power-button desktop-only" onmouseenter="handleAboutHover()" onmouseleave="handleAboutHover()" onclick="toggleAbout()"></div>
+          <div class="record-player-text desktop-only">
+            <span class="player-text word word-1">THE FUTURE</span>
+            <span class="player-text word word-2">OF BUYING</span>
+            <span class="player-text word word-3">THINGS</span>
+            <span class="player-text about hide">ABOUT</span>
+          </div>
         </div>
       </div>
     </div>
@@ -88,7 +90,7 @@
     </div>
   </main>
   <div class="overlay overlay-about">
-    <div class="arrow-button arrow-left close-about" onclick="toggleAbout()">
+    <div class="arrow-button arrow-left close-about desktop-only" onclick="toggleAbout()">
       <img src="images/arrow-left.svg" /> Put Back 
     </div>
     <div class="about-container">

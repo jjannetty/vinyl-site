@@ -99,6 +99,7 @@ main {
 .about-content {
   background: url(images/paper-line.svg);
   background-size: 1px 1.75em;
+  color: #39373A;
   display: flex;
     flex-direction: column;
     gap: 1.75em;
@@ -571,10 +572,11 @@ h3 {
 
   main {
     grid-template-columns: 18% 1fr;
+    padding-top: 0;
   }
 
   .logo {
-    transform: rotate(-90deg) translateX(-25%);
+    transform: rotate(-90deg) translate(-50%, 50%);
     width: 222rem;
   }
 
@@ -602,6 +604,10 @@ h3 {
     transform: rotate3d(0, 1, 0, 90deg) rotateX(90deg) scale3d(1, 1, 1);
   }
 
+  .album:hover{
+    transform: rotate3d(0, 1, 0, 90deg) rotateX(90deg) scale3d(1, 1, 1);
+  }
+
   .album:nth-child(2n) {
     margin-left: 4rem;
   }
@@ -618,14 +624,23 @@ h3 {
     margin-left: -5rem;
   }
 
-  .record-player-container {
-    height: 264rem;
-    overflow: hidden;
+  .record-player-clip {
+    height: 135rem;
   }
 
   .record-player-wrapper {
     position: absolute;
       bottom: 0;
+    width: auto;
+  }
+
+  .record-player {
+    padding-left: 60rem;
+    min-width: 430rem;
+  }
+
+  .partners {
+    padding-bottom: 98rem;
   }
 
   .partner {
@@ -635,6 +650,81 @@ h3 {
     text-decoration: none;
     margin-bottom: 16rem;
     width: fit-content;
+  }
+
+  .overlay-about {
+    padding: 0;
+    position: relative;
+    display: block;
+  }
+
+  .about-container {
+    margin: 0;
+  }
+
+  .about-content {
+    padding: 0.25em 16rem 2em 16.5%;
+  }
+
+  .animate-flat {
+    animation-duration: 0s;
+    position: fixed;
+    width: 80vw;
+    height: 80vw; 
+    left: 4vw;
+  }
+
+  .animate-flat .record {
+    animation-name: none;
+    width: 80vw;
+    height: 80vw;
+    left: 16vw;
+  }
+  .animate-flat .cover {
+    box-shadow: 2rem 2rem 10rem rgba(0, 0, 0, 0.2);
+  }
+  .animate-side {
+    animation-duration: 0s;
+  }
+  
+  .animate-side .record {
+    animation-duration: 0s;
+  }
+
+  .back {
+    background: rgba(255, 0, 0, 0.5);
+    width: 80vw;
+    height: 80vw;
+    transform: translateZ(calc(var(--album-spine-width) * -1));
+  }
+  .cover {
+    background-size: cover;
+    background-position: center;
+    width: 80vw;
+    height: 80vw;
+  }
+  .bottom {
+    background: black;
+    width: 80vw;
+    height: var(--album-spine-width);
+    bottom: 0rem;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+  } 
+
+  .arrow-right {
+    position: absolute;
+    bottom: -60rem;
+    left: 0;
+    transform: translateX(16vw);
+  }
+
+  .put-back {
+    animation-delay: 0s;
+    opacity: 0;
+    position: absolute;
+    top: 60rem;
+    transform: translate(20%, 0);
   }
 }
 
