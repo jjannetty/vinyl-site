@@ -126,7 +126,7 @@ main {
   margin: 24rem auto;
 }
 
-.put-back {
+.put-back, .site-link {
   animation-name: fade-in;
     animation-delay: 1s;
     animation-duration: 0.2s;
@@ -134,9 +134,19 @@ main {
     transition-timing-function: ease-in-out;
   opacity: 0;
   position: absolute;
-    top: 50%;
-    right: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,2000px);
+}
+
+.put-back {
+  right: 50%;
   transform: translate(-290rem, -50%);
+}
+
+.site-link {
+  left: 50%;
+  transform: translate(290rem, -50%);
 }
 
 .grain {
@@ -307,6 +317,7 @@ h3 {
   position: fixed;
     top: calc(50% - (var(--album-dimensions))/2);
     left: calc(50% - (var(--album-dimensions))/2);
+  width: var(--album-dimensions);
   z-index: 9999;
 }
 

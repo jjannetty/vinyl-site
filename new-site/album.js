@@ -39,11 +39,11 @@ export const album = (company, index) => {
   const bottom = document.createElement('div')
   const albumName = document.createElement('div')
   const record = document.createElement('div')
-  const siteLink = document.createElement('a')
   const lightSpines = [8, 7, 6, 4, 2]
   const spineSelection = getRandomInt(8)
 
   album.classList.add('album', `album-${index}`)
+  album.setAttribute('data-site', company.site)
 
   spine.classList.add('spine', 'side')
   spine.style.backgroundImage = `url(images/0${spineSelection}-spine.jpg)`
@@ -60,13 +60,7 @@ export const album = (company, index) => {
   albumName.style.color = lightSpines.includes(spineSelection) ? '#000' : '#FFF'
 
   record.classList.add('record' ,'side')
-
-  siteLink.setAttribute('href', `${company.site}`)
-  siteLink.setAttribute('target', '_blank')
-  siteLink.setAttribute('class', 'arrow-button arrow-right')
-  siteLink.innerHTML = 'Visit Site <img src="images/arrow-right.svg">'
-
-  record.appendChild(siteLink)
+  
   album.appendChild(back)
   album.appendChild(bottom)
   spine.appendChild(albumName)

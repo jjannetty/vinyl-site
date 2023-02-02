@@ -33,6 +33,13 @@ window.toggleAlbum = () => {
   handleClick(currentAlbum)
 }
 
+window.goToSite = () => {
+  const currentAlbum = document.querySelector('.animate-flat')
+  const siteLink = currentAlbum.dataset.site
+
+  window.open(siteLink)
+}
+
 window.toggleAbout = () => {
   const aboutOverlay = document.querySelector('.overlay-about')
   const classes = aboutOverlay.classList
