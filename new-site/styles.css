@@ -151,7 +151,7 @@ main {
 }
 
 .grain {
-  background-image: url(images/grain.jpg);
+  background-image: url(images/grain-2.jpg);
   background-size: 500rem;
   pointer-events: none;
   position: absolute;
@@ -596,7 +596,7 @@ h3 {
     padding-top: 0;
   }
 
-  .logo.mobile-only {
+  .logo-mobile {
     transform: rotate(-90deg) translate(-50%, 50%);
     width: 222rem;
   }
