@@ -446,6 +446,10 @@ h3 {
   background-image: url(images/travis-portrait.jpg);
 }
 
+.picture-background.jake {
+  background-image: url(images/jake-portrait.jpg);
+}
+
 .picture-frames {
   display: flex;
     justify-content: space-around;
