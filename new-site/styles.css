@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Unbounded:wght@500;700&family=Zeyada&display=swap');
-
 @font-face {
   font-family: "Alarm Clock";
   src: url("fonts/alarm-clock/alarm_clock-webfont.woff") format("woff");
@@ -127,11 +125,10 @@ main {
 }
 
 .put-back, .site-link {
-  animation-name: fade-in;
-    animation-delay: 1s;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;
-    transition-timing-function: ease-in-out;
+  animation-delay: 1.2s;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-in-out;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -139,14 +136,18 @@ main {
   transform: translate3d(0,0,2000px);
 }
 
+.fade-in {
+  animation-name: fade-in;
+}
+
 .put-back {
-  right: 50%;
-  transform: translate(-290rem, -50%);
+  left: 0;
+  transform: translate3d(-130%,-50%,2000px);
 }
 
 .site-link {
-  left: 50%;
-  transform: translate(290rem, -50%);
+  right: 0;
+  transform: translate3d(130%,-50%,2000px);
 }
 
 .grain {
@@ -251,14 +252,13 @@ h3 {
   left: 50%;
 }
 .album {
-  display: flex;
   height: var(--album-dimensions);
   width: var(--album-spine-width);
   margin-bottom: -1rem;
   position: relative;
   transform-origin: center;
   transform-style: preserve-3d;
-  transition: all 0.2s;
+  transition: transform 0.2s;
   transform: translate3d(0,0,1000px) rotate3d(0, 1, 0, 90deg) rotateX(10deg) scale3d(1, 1, 1);
   z-index: 1 ;
 }
@@ -292,6 +292,7 @@ h3 {
   font-family: 'Unbounded', sans-serif;
   font-size: 16rem;
   width: fit-content;
+  height: fit-content;
   text-decoration: none;
 }
 
@@ -728,21 +729,23 @@ h3 {
     bottom: 0rem;
     transform-origin: bottom;
     transform: rotateX(90deg);
-  } 
-
-  .arrow-right {
-    position: absolute;
-    bottom: -60rem;
-    left: 0;
-    transform: translateX(16vw);
   }
 
   .put-back {
     animation-delay: 0s;
-    opacity: 0;
-    position: absolute;
-    top: 60rem;
-    transform: translate(20%, 0);
+    animation-duration: 0s;
+    top: 0;
+    left: calc(50% + 8vw);
+    transform: translate3d(-50%, -250%, 2000px);
+  }
+
+  .site-link {
+    animation-delay: 0s;
+    animation-duration: 0s;
+    bottom: 0;
+    top: unset;
+    left: calc(50% + 8vw);
+    transform: translate3d(-50%, 250%, 2000px);
   }
 
   .grain {

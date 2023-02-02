@@ -10,26 +10,37 @@ const toggleOverlay = () => {
   classes.toggle('show')
 }
 
-export const handleClick = (album) => {
-  const classes = album.classList
+export const handleClick = (album, siteLink, putBackLink) => {
+  const albumClasses = album.classList
+  const siteLinkClasses = siteLink.classList
+  const putBackLinkClasses = putBackLink.classList
 
   toggleOverlay()
   
-  if (classes.contains('animate-flat')) {
-    classes.remove('animate-flat')
-    classes.add('animate-side')
+  if (albumClasses.contains('animate-flat')) {
+    albumClasses.remove('animate-flat')
+    albumClasses.add('animate-side')
+    siteLinkClasses.remove('fade-in')
+    putBackLinkClasses.remove('fade-in')
     return
   }
   
-  if (classes.contains('animate-side')) {
-    classes.remove('animate-side')
-    classes.add('animate-flat')
+  if (albumClasses.contains('animate-side')) {
+    albumClasses.remove('animate-side')
+    albumClasses.add('animate-flat')
+    siteLinkClasses.add('fade-in')
+    putBackLinkClasses.add('fade-in')
     return
   }
   
-  classes.add('animate-flat')
+  albumClasses.add('animate-flat')
+  albumClasses.remove('animate-side')
+  siteLinkClasses.add('fade-in')
+  putBackLinkClasses.add('fade-in')
   return
 }
+
+
 
 export const album = (company, index) => {
   const album = document.createElement('div')
@@ -38,6 +49,8 @@ export const album = (company, index) => {
   const back = document.createElement('div')
   const bottom = document.createElement('div')
   const albumName = document.createElement('div')
+  const siteLink = document.createElement('a')
+  const putBackLink = document.createElement('div')
   const record = document.createElement('div')
   const lightSpines = [8, 7, 6, 4, 2]
   const spineSelection = getRandomInt(8)
@@ -60,15 +73,26 @@ export const album = (company, index) => {
   albumName.style.color = lightSpines.includes(spineSelection) ? '#000' : '#FFF'
 
   record.classList.add('record' ,'side')
+
+  siteLink.setAttribute('href', `${company.site}`)
+  siteLink.setAttribute('target', '_blank')
+  siteLink.setAttribute('class', 'arrow-button arrow-right album-link site-link')
+  siteLink.innerHTML = 'Visit Site <img src="images/arrow-right.svg">'
+  putBackLink.classList.add('arrow-button', 'arrow-left', 'put-back', 'album-link')
+  putBackLink.innerHTML = '<img src="images/arrow-left.svg"> Put Back'
   
+  spine.appendChild(albumName)
+
   album.appendChild(back)
   album.appendChild(bottom)
-  spine.appendChild(albumName)
+  album.appendChild(bottom)
   album.appendChild(spine)
   album.appendChild(record)
   album.appendChild(cover)
+  album.appendChild(putBackLink)
+  album.appendChild(siteLink)
 
-  album.addEventListener('click', () => handleClick(album))
+  album.addEventListener('click', () => handleClick(album, siteLink, putBackLink))
 
   return album
 }
