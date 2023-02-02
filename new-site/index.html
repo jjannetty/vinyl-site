@@ -22,12 +22,14 @@
   <script type="module" src="album.js"></script>
   <script type="module" src="porfolio.js"></script>
   <script type="module" src="scripts.js"></script>
+  <script type="module" src="scroll.js"></script>
 </head>
 <body>
   <main class="main">
     <div class="blur"></div>
     <div class="grain"></div>
-    <img class="logo" src="images/vinyl_logo.svg" alt="Vinyl Logo">
+    <img class="logo logo-desktop desktop-only" src="images/vinyl_logo.svg" alt="Vinyl Logo">
+    <img class="logo logo-mobile  mobile-only-block" src="images/vinyl_logo.svg" alt="Vinyl Logo">
     <div class="record-player-container">
       <div class="record-player-clip">
         <div class="record-player-wrapper">
@@ -118,6 +120,7 @@
   <script type="text/javascript">
     window.onload = (event) => {
       albums();
+      scrollEffect();
     }
   </script>
 </body>

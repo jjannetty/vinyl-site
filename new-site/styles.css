@@ -176,7 +176,7 @@ main {
   z-index: 9;
 }
 
-.logo {
+.logo.desktop-only {
   margin: 0 16rem;
   max-width: 364rem;
   position: relative;
@@ -205,7 +205,6 @@ h3 {
 .partners {
   position: relative;
   z-index: 99;
-  padding-bottom: 188rem;
 }
 
 .spine {
@@ -597,7 +596,7 @@ h3 {
     padding-top: 0;
   }
 
-  .logo {
+  .logo.mobile-only {
     transform: rotate(-90deg) translate(-50%, 50%);
     width: 222rem;
   }
