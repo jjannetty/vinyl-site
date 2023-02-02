@@ -152,7 +152,7 @@ main {
 
 .grain {
   background-image: url(images/grain.jpg);
-  background-size: 700rem;
+  background-size: 500rem;
   pointer-events: none;
   position: absolute;
     top: 0;
