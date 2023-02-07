@@ -24,7 +24,9 @@ window.albums = () => {
     shelf.appendChild(Album)
   })
 
-  page.classList.add('visible')
+  setTimeout(() => {
+    page.classList.add('visible')
+  }, 500)
 }
 
 window.toggleAlbum = () => {

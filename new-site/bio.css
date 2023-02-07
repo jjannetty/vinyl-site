@@ -1,0 +1,138 @@
+html {
+  font-size: 1px;
+}
+
+html, body {
+  font-family: 'Unbounded', sans-serif;
+  color: #39373A;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+
+main {
+  box-sizing: border-box;
+  box-shadow: inset 20px 0 40px rgba(0,0,0,0.3);
+  background: url(images/bio-background.svg), url(images/bio-background-3.jpg);
+  background-blend-mode: multiply;
+  margin-left: 10%;
+  padding:  32rem 48rem;
+  position: relative;
+  background-size: 100% auto, contain;
+  background-repeat: repeat;
+  min-height: 100vh;
+}
+
+main::before {
+  display: block;
+  content: '';
+  background: url(images/bio-background-2.svg), url(images/bio-background-3.jpg);
+  background-blend-mode: multiply;
+  background-size: 100% auto, contain;
+  border-right: 1px solid #bbbbbb;
+  box-shadow: inset -10px 0 40px rgba(0,0,0,0.3);
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 27rem;
+  line-height: 1.45em;
+  margin: 16rem 0 0 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 18rem;
+  line-height: 1.45em;
+  margin: 0;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 18rem;
+  line-height: 1.45em;
+  margin: 0 0 12rem;
+}
+
+.arrow-button {
+  color: #39373A;
+  cursor: pointer;
+  display: flex;
+    align-items: center;
+    gap: 8rem;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 16rem;
+  width: fit-content;
+  height: fit-content;
+  text-decoration: none;
+}
+
+.arrow-button img {
+  height: 1em;
+  transition: all 0.2s;
+}
+
+.arrow-right:hover img {
+  transform: translateX(3rem);
+}
+
+.arrow-left:hover img {
+  transform: translateX(-3rem);
+}
+
+.header {
+  border-bottom: 1px solid #39373A;
+  padding: 16rem 0;
+}
+
+.body {
+  display: grid;
+    grid-template-columns: minmax(auto, 300rem) 1fr;
+}
+
+.body-inner {
+  padding: 20rem;
+}
+
+.body-section {
+  margin-bottom: 24rem;
+}
+
+.image {
+  padding-left: 0;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  mix-blend-mode: darken;
+}
+
+ul {
+  padding-left: 24rem;
+}
+
+li, p {
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 1.45em;
+  margin-top: 0;
+  margin-bottom: 12rem;
+}
+
+li p {
+  font-weight: 400;
+  font-size: 12rem;
+  line-height: 1.45em;
+  margin: 0;
+}
+
+.resume {
+  border-left: 1px solid #39373A;
+}
