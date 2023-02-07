@@ -135,4 +135,42 @@ li p {
 
 .resume {
   border-left: 1px solid #39373A;
+  max-width: 700rem;
+}
+
+.social-links {
+  font-family: sans-serif;
+  font-size: 14rem;
+  font-style: italic;
+  padding: 6rem;
+}
+
+.social-link {
+  color: #39373A;
+}
+
+@media (max-width: 768px) {
+  .body {
+    display: grid;
+      grid-template-columns: 100%;
+  }
+
+  .image img {
+    max-width: 300rem;
+  }
+
+  .resume {
+    border-left: 0;
+    border-top: 1px solid #39373A;
+    padding-left: 0;
+  }
+
+  main {
+    box-shadow: inset 20px 0 40px rgba(0,0,0,0.1);
+    padding: 24rem;
+  }
+
+  main::before {
+    box-shadow: inset -10px 0 40px rgba(0,0,0,0.1);
+  }
 }

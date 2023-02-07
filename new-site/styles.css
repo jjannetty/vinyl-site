@@ -200,6 +200,11 @@ h3 {
   text-decoration: none;
   margin-bottom: 16rem;
   width: fit-content;
+  transition: letter-spacing 0.15s;
+}
+
+.partner:hover {
+  letter-spacing: 2rem;
 }
 
 .partners {
@@ -413,6 +418,11 @@ h3 {
     justify-content: center;
   position: relative;
   width: 30%;
+  transition: transform 0.15s;
+}
+
+.picture-frame-container:hover {
+  transform: scale(1.02) translateY(-2%);
 }
 
 .picture-frame {
@@ -671,6 +681,7 @@ h3 {
     font-size: 16rem;
     text-decoration: none;
     margin-bottom: 16rem;
+    letter-spacing: 0rem;
     width: fit-content;
   }
 
