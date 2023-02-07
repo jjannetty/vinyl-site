@@ -610,6 +610,7 @@ h3 {
   .logo-mobile {
     transform: rotate(-90deg) translate(-50%, 50%);
     width: 222rem;
+    z-index: 9999;
   }
 
   .container {
