@@ -133,6 +133,16 @@ li p {
   margin: 0;
 }
 
+li a {
+  color: #39373A;
+  text-decoration: none;
+  transition: letter-spacing 0.15s;
+}
+
+li a:hover {
+  letter-spacing: 2rem;
+}
+
 .resume {
   border-left: 1px solid #39373A;
   max-width: 700rem;
