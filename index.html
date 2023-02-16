@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <title>VINYL</title>
-  <meta name="description" content="Cuttin' checks, 50% off all term sheets! rock & roll">
+  <meta name="description" content="The best commerce investors in the world.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Unbounded:wght@500;700&family=Zeyada&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -15,210 +18,107 @@
 
     gtag('config', 'G-2C068Z50Z1');
   </script>
-  <script type="text/javascript" src="scripts.js"></script>
+  <script type="module" src="toggle-overlay.js"></script>
+  <script type="module" src="album.js"></script>
+  <script type="module" src="porfolio.js"></script>
+  <script type="module" src="scripts.js"></script>
 </head>
 <body>
-  <div class="main">
-    <div class="hero">
-      <div class="overlay">
-        <div class="albums">
-          <a href="https://www.reactive.live/" class="album" target="_blank">
-            <img src="images/album-reactive.png">
-          </a>
-          <a href="https://www.postscript.io/" class="album" target="_blank">
-            <img src="images/album-postscript.png">
-          </a>
-          <a href="https://treat.xyz/" class="album" target="_blank">
-            <img src="images/album-treat.png">
-          </a>
-          <a href="https://www.gordiansoftware.com/" class="album" target="_blank">
-            <img src="images/album-gordian.png">
-          </a>
-          <a href="https://www.skipify.com/" class="album" target="_blank">
-            <img src="images/album-skipify.png">
-          </a>
-          <a href="https://www.intelligems.io/" class="album" target="_blank">
-            <img src="images/album-intelligems.png">
-          </a>
-          <a href="https://www.freshbooks.com/" class="album" target="_blank">
-            <img src="images/album-freshbooks.png">
-          </a>
-          <a href="https://www.peelinsights.com/" class="album" target="_blank">
-            <img src="images/album-peel.png">
-          </a>
-          <a href="https://www.koverly.com/" class="album" target="_blank">
-            <img src="images/album-koverly.png">
-          </a>
-          <a href="https://www.klaviyo.com/" class="album" target="_blank">
-            <img src="images/album-klaviyo.png">
-          </a>
-          <a href="https://www.getrepeat.io/" class="album" target="_blank">
-            <img src="images/album-repeat.png">
-          </a>
-          <a href="https://getxeno.com/" class="album" target="_blank">
-            <img src="images/album-xeno.png">
-          </a>
-          <a href="https://www.blueonionlabs.com/" class="album" target="_blank">
-            <img src="images/album-blue-onion.png">
-          </a>
-          <a href="https://chooose.today/" class="album" target="_blank">
-            <img src="images/album-chooose.png">
-          </a>
-          <a href="https://www.bainbridgegrowth.com/" class="album" target="_blank">
-            <img src="images/album-bainbridge.png">
-          </a>
-          <a href="#" class="album" target="_blank">
-            <img src="images/album-prophetably.png">
-          </a>
-          <a href="https://popchew.com/" class="album" target="_blank">
-            <img src="images/album-popchew.png">
-          </a>
-          <a href="https://www.twoboxes.com/" class="album" target="_blank">
-            <img src="images/album-two-boxes.png">
-          </a>
-          <a href="https://www.raincards.xyz/" class="album" target="_blank">
-            <img src="images/album-rain.png">
-          </a>
+  <main class="main">
+    <div class="blur"></div>
+    <div class="grain"></div>
+    <img class="logo logo-desktop desktop-only" src="images/vinyl_logo.svg" alt="Vinyl Logo">
+    <img class="logo-mobile  mobile-only-block" src="images/vinyl_logo.svg" alt="Vinyl Logo">
+    <div class="record-player-container">
+      <div class="record-player-clip">
+        <div class="record-player-wrapper">
+          <img class="record-player" src="images/record-player@2x.png" />
+          <img class="power-light pulse desktop-only" src="images/power-light.svg" />
+          <div class="power-button desktop-only" onmouseenter="handleAboutHover()" onmouseleave="handleAboutHover()" onclick="toggleAbout()"></div>
+          <div class="record-player-text desktop-only">
+            <span class="player-text word word-1">THE FUTURE</span>
+            <span class="player-text word word-2">OF BUYING</span>
+            <span class="player-text word word-3">THINGS</span>
+            <span class="player-text about hide">ABOUT</span>
+          </div>
         </div>
-      </div>
-      <header>
-        <img class="logo" src="images/vinyl_logo.svg" alt="Vinyl Logo">
-      </header>
-      <div class="hero-image"></div>
-      <div class="partners">
-        <h2>Produced By:</h2>
-        <div class="partner-list">
-          <a class="partner" href=" https://angel.co/p/tjmahony" target="_blank">TJ Mahony</a>
-          <a class="partner" href="https://angel.co/u/travis-lowry-2" target="_blank">Travis Kirk Lowry</a>
-          <a class="partner" href="https://angel.co/u/jfccohen#" target="_blank">Jake Cohen</a>
-        </div>
-        <footer class='desktop-only'><span>56 Wareham Street, 3rd Floor.</span> <span>Boston MA, 02118</span></footer>
       </div>
     </div>
-    <div class="portfolio">
-      <ul class="portfolio-list">
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-reactive.png">
-          <a class="portfolio-list-link" href="https://www.reactive.live/" target="_blank">
-            Reactive
+    <div class="content">
+      <div id="partners" class="partners desktop-only">
+        <h3>Produced By</h3>
+        <a class="partner" href="tj-mahony/">TJ Mahony</a>
+        <a class="partner" href="travis-kirk-lowry/">Travis Kirk Lowry</a>
+        <a class="partner" href="jake-cohen/">Jake Cohen</a>
+      </div>
+    </div>
+    <div class="shelves">
+      <div class="shelves-top"></div>
+      <div class="shelves-side"></div>
+      <div class="shelf">
+        <div class="container">
+          <div class="overlay overlay-album">
+          </div>
+        </div>
+        <div class="shelf-bottom shelf-bottom-1"></div>
+      </div>
+      <div class="shelf">
+        <div class="picture-frames desktop-only">
+          <a href="tj-mahony/" class="picture-frame-container">
+            <div class="picture-background tj"></div>
+            <img class="picture-frame" src="images/frame-1.png" />
           </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-postscript.png">
-          <a class="portfolio-list-link" href="https://www.postscript.io/" target="_blank">
-            Postscript
+          <a href="travis-kirk-lowry/" class="picture-frame-container">
+            <div class="picture-background travis"></div>
+            <img class="picture-frame" src="images/frame-2.png" />
           </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-treat.png">
-          <a class="portfolio-list-link" href="https://treat.xyz/" target="_blank">
-            Treat
+          <a href="jake-cohen/" class="picture-frame-container">
+            <div class="picture-background jake"></div>
+            <img class="picture-frame" src="images/frame-3.png" />
           </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-gordian.png">
-          <a class="portfolio-list-link" href="https://www.gordiansoftware.com/" target="_blank">
-            Gordian
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-skipify.png">
-          <a class="portfolio-list-link" href="https://www.skipify.com/" target="_blank">
-            Skipify
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-intelligems.png">
-          <a class="portfolio-list-link" href="https://www.intelligems.io/" target="_blank">
-            Intelligems
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-freshbooks.png">
-          <a class="portfolio-list-link" href="https://www.freshbooks.com/" target="_blank">
-            Freshbooks
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-peel.png">
-          <a class="portfolio-list-link" href="https://www.peelinsights.com/" target="_blank">
-            Peel
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-koverly.png">
-          <a class="portfolio-list-link" href="https://www.koverly.com/" target="_blank">
-            Koverly
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-klaviyo.png">
-          <a class="portfolio-list-link" href="https://www.klaviyo.com/" target="_blank">
-            Klaviyo
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-repeat.png">
-          <a class="portfolio-list-link" href="https://www.getrepeat.io/" target="_blank">
-            Repeat
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-xeno.png">
-          <a class="portfolio-list-link" href="https://getxeno.com/" target="_blank">
-            Xeno
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-blue-onion.png">
-          <a class="portfolio-list-link" href="https://www.blueonionlabs.com/" target="_blank">
-            Blue Onion
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-chooose.png">
-          <a class="portfolio-list-link" href="https://chooose.today/" target="_blank">
-            Chooose
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-bainbridge.png">
-          <a class="portfolio-list-link" href="https://www.bainbridgegrowth.com/" target="_blank">
-            Bainbridge
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-prophetably.png">
-          <a class="portfolio-list-link" href="#" target="_blank">
-            Prophetably
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-popchew.png">
-          <a class="portfolio-list-link" href="https://popchew.com/" target="_blank">
-            Popchew
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-two-boxes.png">
-          <a class="portfolio-list-link" href="https://www.twoboxes.com/" target="_blank">
-            Two Boxes
-          </a>
-        </li>
-        <li class="portfolio-list-item">
-          <img class="mobile-only mobile-album" src="images/album-rain.png">
-          <a class="portfolio-list-link" href="https://www.raincards.xyz/" target="_blank">
-            Rain
-          </a>
-        </li>
-      </ul>
-      <footer class='mobile-only'><span>56 Wareham Street, 3rd Floor.</span> <span>Boston MA, 02118</span></footer>
+        </div>
+        <div class="container mobile-only-block">
+          <div class="partners">
+            <h3>Produced By</h3>
+            <a class="partner" href="tj-mahony/">TJ Mahony</a>
+            <a class="partner" href="travis-kirk-lowry/">Travis Kirk Lowry</a>
+            <a class="partner" href="jake-cohen/">Jake Cohen</a>
+          </div>
+        </div>
+        <div class="shelf-bottom shelf-bottom-2"></div>
+      </div>
+      <div class="shelf shelf-bottom"></div>
+    </div>
+  </main>
+  <div class="overlay overlay-about">
+    <div class="arrow-button arrow-left close-about desktop-only" onclick="toggleAbout()">
+      <img src="images/arrow-left.svg" /> Go Back 
+    </div>
+    <div class="about-container">
+      <div class="about-content">
+        <p>
+          In August of 1994, the New York Times ran an article (in print, they did not have an online issue until 1996) titled “ Attention Shoppers: The Internet is Now Open”. The piece celebrated a seminal moment of the internet era — the first secure online purchase. A few kids in Nashua, New Hampshire hacked together an encryption technique that would allow the average joe to safely and securely purchase goods online.
+        </p>
+        <p>
+          So what was purchased that day? Of the millions of things we can now securely purchase online, what was the single item that Phil Brandenberger of Philadelphia purchased at 12:00pm on August 11, 1994?
+  He purchased music — a Sting album. Music started the digital overhaul of commerce.
+        </p>
+        <p>
+          Over the ages, music has been captured through an assortment of mediums — vinyl, 8-track cartridges, cassette tapes, compact discs, and MP3s et al. All, sans one, of those form factors are extinct or heading for extinction. Vinyl, the foundational medium of the first phonograph, is the oldest and most persistent form of capturing sound.
+        </p>
+        <p>
+          A purely analog technology, Vinyl is inferior to digital forms in endless respects; except one, fullness. Digital compression methods intentionally remove artifacts to ensure the cleanest output. Vinyl absorbs artifacts, capturing every sound that actually occurred during a recording. There is no compression algorithm, you can't make it smaller, and it doesn't sound like it came out of a computer….
+  Vinyl is real, tangible, tactile — it's the entirety of the experience.
+        </p>
+        <p>
+          TJ
+        </p>
+      </div>
     </div>
   </div>
-
   <script type="text/javascript">
     window.onload = (event) => {
-      displayAlbum();
+      albums();
     }
   </script>
 </body>
