@@ -1,64 +1,55 @@
-window.displayAlbum = () => {
-  let clients = document.getElementsByClassName('portfolio-list-link');
-  let albums = document.getElementsByClassName('album');
-  let mobileAlbums = document.getElementsByClassName('mobile-album');
-  let overlay = document.querySelector('.overlay');
-  let portfolio = document.querySelector('.portfolio');
+import { portfolio } from './portfolio.js'
+import { album, handleClick } from './album.js'
 
-  overlay.addEventListener('click', () => {
-    let displayed = document.querySelector('.album.display');
+const toggleRecordPlayerText = () => {
+  const texts = document.querySelectorAll('.player-text')
 
-    overlay.classList.remove('display-flex')
-    displayed.classList.remove('display')
+  texts.forEach(text => {
+    text.classList.toggle('hide')
+  })
+}
+
+const togglePowerIndicatorState = () => {
+  const powerIndicator = document.querySelector('.power-light')
+
+  powerIndicator.classList.toggle('pulse')
+}
+
+window.albums = () => {
+  const page = document.querySelector('.main')
+  const shelf = document.querySelector('.container')
+  portfolio.forEach((company, index) => {
+    const Album = album(company, index)
+
+    shelf.appendChild(Album)
   })
 
-  portfolio.addEventListener('click', () => {
-    let windowWidth = window.innerWidth
+  setTimeout(() => {
+    page.classList.add('visible')
+  }, 500)
+}
 
-    if (windowWidth > 850) {
-      let displayed = document.querySelector('.album.display');
+window.toggleAlbum = () => {
+  const currentAlbum = document.querySelector('.animate-flat')
 
-      overlay.classList.remove('display-flex')
-      displayed.classList.remove('display')
-    }
-  })
+  handleClick(currentAlbum)
+}
 
-  Array.from(clients).forEach((client, index) => { 
-    let album = albums.item(index)
+window.goToSite = () => {
+  const currentAlbum = document.querySelector('.animate-flat')
+  const siteLink = currentAlbum.dataset.site
 
-    client.addEventListener('mouseenter', () => {
-      let windowWidth = window.innerWidth
-      let displayed = document.querySelector('.album.display');
+  window.open(siteLink)
+}
 
-      if (windowWidth > 850) {
-        if (!displayed) {
-          overlay.classList.add('display-flex')
-        }
+window.toggleAbout = () => {
+  const aboutOverlay = document.querySelector('.overlay-about')
+  const classes = aboutOverlay.classList
 
-        if (!album.classList.contains('display')) {
-          album.classList.add('display')
-          displayed.classList.remove('display')
-        }
-      }
-    })
-  })
+  classes.toggle('show')
+}
 
-  Array.from(mobileAlbums).forEach((album, index) => {
-    let largeAlbum = albums.item(index)
-
-    album.addEventListener('click', () => {
-      let windowWidth = window.innerWidth
-      let displayed = document.querySelector('.album.display');
-
-      if (windowWidth <= 850) {
-        if (!displayed) {
-          overlay.classList.add('display-flex')
-        }
-
-        if (!largeAlbum.classList.contains('display')) {
-          largeAlbum.classList.add('display')
-        }
-      }
-    })
-  })
+window.handleAboutHover = () => {
+  togglePowerIndicatorState()
+  toggleRecordPlayerText()
 }
