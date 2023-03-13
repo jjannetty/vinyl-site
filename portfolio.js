@@ -93,5 +93,10 @@ export const portfolio = [
     name: "Rain",
     site: "https://www.raincards.xyz/",
     album: "images/albums/album-rain.png"
+  },
+  {
+    name: "Paylode",
+    site: "https://www.paylode.com/",
+    album: "images/albums/album-paylode.png"
   }
 ]
