@@ -98,5 +98,10 @@ export const portfolio = [
     name: "Paylode",
     site: "https://www.paylode.com/",
     album: "images/albums/album-paylode.png"
+  },
+  {
+    name: "Starday",
+    site: "https://www.stardayfoods.com/",
+    album: "images/albums/album-starday.png"
   }
 ]
