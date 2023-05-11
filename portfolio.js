@@ -76,7 +76,7 @@ export const portfolio = [
   },
   {
     name: "Prophetably",
-    site: "#",
+    site: "https://prophetably.com/",
     album: "images/albums/album-prophetably.png"
   },
   {
