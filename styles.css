@@ -610,7 +610,7 @@ h3 {
   .logo-mobile {
     transform: rotate(-90deg) translate(-50%, 50%);
     width: 222rem;
-    z-index: 9999;
+    z-index: 999;
   }
 
   .container {
@@ -690,6 +690,7 @@ h3 {
     padding: 0;
     position: relative;
     display: block;
+    z-index: 1;
   }
 
   .about-container {

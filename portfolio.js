@@ -103,5 +103,10 @@ export const portfolio = [
     name: "Starday",
     site: "https://www.stardayfoods.com/",
     album: "images/albums/album-starday.png"
+  },
+  {
+    name: "Factored Quality",
+    site: "https://www.factoredquality.com/",
+    album: "images/albums/album-factored-quality.png"
   }
 ]
