@@ -70,14 +70,14 @@ export const portfolio = [
     album: "images/albums/album-chooose.png"
   },
   {
-    name: "Bainbridge",
-    site: "https://www.bainbridgegrowth.com/",
-    album: "images/albums/album-bainbridge.png"
+    name: "Drivepoint",
+    site: "https://www.drivepoint.io/",
+    album: "images/albums/album-drivepoint.png"
   },
   {
-    name: "Prophetably",
-    site: "https://prophetably.com/",
-    album: "images/albums/album-prophetably.png"
+    name: "Affiliate.com",
+    site: "https://www.affiliate.com/",
+    album: "images/albums/album-affiliate.png"
   },
   {
     name: "Popchew",
