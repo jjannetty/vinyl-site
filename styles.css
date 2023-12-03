@@ -634,11 +634,11 @@ h3 {
     margin-bottom: 0rem;
     position: relative;
     transform-origin: top left;
-    transform: rotate3d(0, 1, 0, 90deg) rotateX(90deg) scale3d(1, 1, 1);
+    transform: translate3d(0,0,1000px) rotate3d(0, 1, 0, 90deg) rotateX(90deg) scale3d(1, 1, 1);
   }
 
   .album:hover{
-    transform: rotate3d(0, 1, 0, 90deg) rotateX(90deg) scale3d(1, 1, 1);
+    transform: translate3d(0,0,1000px) rotate3d(0, 1, 0, 90deg) rotateX(90deg) scale3d(1, 1, 1);
   }
 
   .album:nth-child(2n) {
