@@ -589,6 +589,28 @@ h3 {
   display: none;
 }
 
+.mobile-albums {
+  display: none;
+  padding: 32rem 0rem 0 32rem;
+  position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.mobile-spine {
+  border-radius: 4px;
+  background-size: cover;
+  cursor: pointer;
+  height: var(--album-spine-width);
+  margin-bottom: 2rem;
+  width: var(--album-dimensions);
+}
+
+.mobile-album-name {
+  font-family: 'Alfa Slab One';
+  padding-left: 19rem;
+}
+
 @media (max-width: 920px) {
   h3 {
     font-size: 20rem;
@@ -622,6 +644,7 @@ h3 {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 32rem 0rem 0 32rem;
+    position: relative;
   }
 
   .shelf-bottom, .shelves-top {
@@ -643,24 +666,28 @@ h3 {
     transform: translate3d(0,0,1000px) rotate3d(0, 1, 0, 90deg) rotateX(90deg) scale3d(1, 1, 1);
   }
 
+  .spine {
+    opacity: 0;
+  }
+
   .album:hover{
     -webkit-transform: translate3d(0,0,1000px) rotate3d(0, 1, 0, 90deg) rotateX(90deg) scale3d(1, 1, 1);
     transform: translate3d(0,0,1000px) rotate3d(0, 1, 0, 90deg) rotateX(90deg) scale3d(1, 1, 1);
   }
 
-  .album:nth-child(2n) {
+  .album:nth-child(2n), .mobile-spine:nth-child(2n) {
     margin-left: 4rem;
   }
 
-  .album:nth-child(3n) {
+  .album:nth-child(3n), .mobile-spine:nth-child(3n) {
     margin-left: -2rem;
   }
 
-  .album:nth-child(2n+7) {
+  .album:nth-child(2n+7), .mobile-spine:nth-child(2n+7) {
     margin-left: -12rem;
   }
 
-  .album:nth-child(3n+12) {
+  .album:nth-child(3n+12), .mobile-spine:nth-child(3n+12) {
     margin-left: -5rem;
   }
 
@@ -726,12 +753,20 @@ h3 {
   .animate-flat .cover {
     box-shadow: 2rem 2rem 10rem rgba(0, 0, 0, 0.2);
   }
+
+  .animate-flat .spine {
+    opacity: 1;
+  }
   .animate-side {
     animation-duration: 0s;
   }
   
   .animate-side .record {
     animation-duration: 0s;
+  }
+
+  .animate-side .spine {
+    opacity: 0;
   }
 
   .back {
@@ -774,6 +809,10 @@ h3 {
 
   .grain {
     opacity: 0;
+  }
+
+  .mobile-albums {
+    display: block;
   }
 }
 

@@ -1,5 +1,5 @@
 import { portfolio } from './portfolio.js'
-import { album, handleClick } from './album.js'
+import { album, handleClick, mobileAlbum } from './album.js'
 
 const toggleRecordPlayerText = () => {
   const texts = document.querySelectorAll('.player-text')
@@ -18,10 +18,13 @@ const togglePowerIndicatorState = () => {
 window.albums = () => {
   const page = document.querySelector('.main')
   const shelf = document.querySelector('.container')
+  const mobileAlbumContainer = document.querySelector('.mobile-albums')
   portfolio.forEach((company, index) => {
     const Album = album(company, index)
+    const MobileAlbum = mobileAlbum(company)
 
     shelf.appendChild(Album)
+    mobileAlbumContainer.appendChild(MobileAlbum)
   })
 
   setTimeout(() => {

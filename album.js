@@ -1,4 +1,5 @@
 const albumOverlay = document.querySelector('.overlay-album')
+const lightSpines = [8, 7, 6, 4, 2]
 
 const getRandomInt = (max) => {
   return Math.floor(Math.random() * max)
@@ -40,6 +41,21 @@ export const handleClick = (album, siteLink, putBackLink) => {
   return
 }
 
+export const mobileAlbum = (company) => {
+  const album = document.createElement('div')
+  const albumName = document.createElement('div')
+  const spineSelection = getRandomInt(8)
+
+  albumName.innerText = `${company.name}`
+  albumName.classList.add('mobile-album-name')
+  albumName.style.color = lightSpines.includes(spineSelection) ? '#000' : '#FFF'
+  album.classList.add('mobile-spine')
+  album.style.backgroundImage = `url(images/0${spineSelection}-spine-mobile.jpg)`
+  album.appendChild(albumName)
+
+  return album
+}
+
 
 
 export const album = (company, index) => {
@@ -52,7 +68,6 @@ export const album = (company, index) => {
   const siteLink = document.createElement('a')
   const putBackLink = document.createElement('div')
   const record = document.createElement('div')
-  const lightSpines = [8, 7, 6, 4, 2]
   const spineSelection = getRandomInt(8)
 
   album.classList.add('album', `album-${index}`)
