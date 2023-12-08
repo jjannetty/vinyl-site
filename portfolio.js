@@ -108,5 +108,10 @@ export const portfolio = [
     name: "Factored Quality",
     site: "https://www.factoredquality.com/",
     album: "images/albums/album-factored-quality.png"
+  },
+  {
+    name: "Taxwire",
+    site: "https://www.taxwire.co/",
+    album: "images/albums/album-taxwire.png"
   }
 ]
