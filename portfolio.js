@@ -120,7 +120,7 @@ export const portfolio = [
     album: "images/albums/album-light-labs.png"
   },
   {
-    name: "LightLabs",
+    name: "Stealth",
     site: "https://www.vinyl.vc",
     album: "images/albums/album-stealth.png"
   }
