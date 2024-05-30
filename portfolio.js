@@ -113,5 +113,15 @@ export const portfolio = [
     name: "Taxwire",
     site: "https://www.taxwire.co/",
     album: "images/albums/album-taxwire.png"
+  },
+  {
+    name: "LightLabs",
+    site: "https://www.lightlabs.com/",
+    album: "images/albums/album-light-labs.png"
+  },
+  {
+    name: "LightLabs",
+    site: "https://www.vinyl.vc",
+    album: "images/albums/album-stealth.png"
   }
 ]
