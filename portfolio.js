@@ -9,10 +9,15 @@ export const portfolio = [
     site: "https://www.postscript.io/",
     album: "images/albums/album-postscript.png"
   },
+  // {
+  //   name: "Treat",
+  //   site: "https://treat.xyz/",
+  //   album: "images/albums/album-treat.png"
+  // },
   {
-    name: "Treat",
-    site: "https://treat.xyz/",
-    album: "images/albums/album-treat.png"
+    name: "Typeface",
+    site: "https://www.typeface.ai/",
+    album: "images/albums/album-typeface.png"
   },
   {
     name: "Gordian",
