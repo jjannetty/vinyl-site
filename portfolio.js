@@ -128,5 +128,10 @@ export const portfolio = [
     name: "Stealth",
     site: "https://www.vinyl.vc",
     album: "images/albums/album-stealth.png"
+  },
+  {
+    name: "AI Growth Labs",
+    site: "https://aigrowthlabs.com/",
+    album: "images/albums/album-ai-growth-labs.png"
   }
 ]
