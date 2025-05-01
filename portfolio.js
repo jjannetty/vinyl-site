@@ -42,17 +42,17 @@ export const portfolio = [
     liquidEvent: true,
     eventText: "Acquired by Pietra"
   },
-  {
-    name: "FAM",
-    site: "#",
-    album: "images/albums/album-placeholder.png",
-    description: "Family travel booking",
-    liquidEvent: false
-  },
+  // {
+  //   name: "FAM",
+  //   site: "#",
+  //   album: "images/albums/album-placeholder.png",
+  //   description: "Family travel booking",
+  //   liquidEvent: false
+  // },
   {
     name: "Faro",
-    site: "#",
-    album: "images/albums/album-placeholder.png",
+    site: "https://www.faro.co/",
+    album: "images/albums/album-faro.png",
     description: "Global apparel upcycling",
     liquidEvent: false
   },
@@ -153,7 +153,7 @@ export const portfolio = [
   {
     name: "Sequen",
     site: "https://www.sequen.ai/",
-    album: "images/albums/album-placeholder.png",
+    album: "images/albums/album-sequen.png",
     description: "Search and personalization",
     liquidEvent: false
   },
@@ -173,26 +173,33 @@ export const portfolio = [
     liquidEvent: false
   },
   {
+    name: "Stealth",
+    site: "#",
+    album: "images/albums/album-stealth.png",
+    description: "Coming Soon",
+    liquidEvent: false,
+  },
+  {
     name: "Taxwire",
     site: "https://www.taxwire.co/",
     album: "images/albums/album-taxwire.png",
     description: "Tax automation software",
     liquidEvent: false
   },
-  {
-    name: "TravelAgent",
-    site: "#",
-    album: "images/albums/album-placeholder.png",
-    description: "Modern travel booking",
-    liquidEvent: false
-  },
-  {
-    name: "Treat",
-    site: "#",
-    album: "images/albums/album-placeholder.png",
-    description: "Marketing collateral generation",
-    liquidEvent: false
-  },
+  // {
+  //   name: "TravelAgent",
+  //   site: "#",
+  //   album: "images/albums/album-placeholder.png",
+  //   description: "Modern travel booking",
+  //   liquidEvent: false
+  // },
+  // {
+  //   name: "Treat",
+  //   site: "#",
+  //   album: "images/albums/album-placeholder.png",
+  //   description: "Marketing collateral generation",
+  //   liquidEvent: false
+  // },
   {
     name: "Two Boxes",
     site: "https://www.twoboxes.com/",

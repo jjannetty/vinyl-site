@@ -17,7 +17,7 @@ html {
 html, body {
   font-family: 'Unbounded', sans-serif;
   color: #FFF;
-  background-color: white;
+  background-color: black;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -25,7 +25,7 @@ html, body {
 }
 
 main {
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(images/pattern-2.svg);
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/pattern-2.svg);
   background-blend-mode: darken;
   background-position: top center;
   box-shadow: inset 30px -26px 200px rgba(0, 0, 0, 0.25);
@@ -853,14 +853,14 @@ h3 {
     position: fixed;
     width: 80vw;
     height: 80vw; 
-    left: 4vw;
+    margin-left: 0 !important;
+    left: 10vw;
   }
 
   .animate-flat .record {
     animation-name: none;
     width: 80vw;
     height: 80vw;
-    left: 16vw;
   }
   .animate-flat .cover {
     box-shadow: 2rem 2rem 10rem rgba(0, 0, 0, 0.2);
@@ -906,7 +906,7 @@ h3 {
     animation-delay: 0s;
     animation-duration: 0s;
     top: 0;
-    left: calc(50% + 8vw);
+    left: calc(50%);
     transform: translate3d(-50%, -250%, 2000px);
   }
 
@@ -915,7 +915,7 @@ h3 {
     animation-duration: 0s;
     bottom: 0;
     top: unset;
-    left: calc(50% + 8vw);
+    left: calc(50%);
     transform: translate3d(-50%, 250%, 2000px);
   }
 
