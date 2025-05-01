@@ -11,6 +11,15 @@ const toggleOverlay = () => {
   classes.toggle('show')
 }
 
+const buildCompanyName = (company) => {
+  const liquidEventName = (company) => {
+    return `${company.name} <span>(${company.eventText})</span>`
+  }
+  const name = company.liquidEvent? liquidEventName(company) : company.name
+
+  return name
+}
+
 export const handleClick = (album, siteLink, putBackLink) => {
   const albumClasses = album.classList
   const siteLinkClasses = siteLink.classList
@@ -46,7 +55,7 @@ export const mobileAlbum = (company) => {
   const albumName = document.createElement('div')
   const spineSelection = getRandomInt(8)
 
-  albumName.innerText = `${company.name}`
+  albumName.innerHTML = buildCompanyName(company)
   albumName.classList.add('mobile-album-name')
   albumName.style.color = lightSpines.includes(spineSelection) ? '#000' : '#FFF'
   album.classList.add('mobile-spine')
@@ -84,7 +93,7 @@ export const album = (company, index) => {
   bottom.classList.add('bottom', 'side')
 
   albumName.classList.add('album-name',  'side')
-  albumName.innerText = `${company.name}`
+  albumName.innerHTML = buildCompanyName(company)
   albumName.style.color = lightSpines.includes(spineSelection) ? '#000' : '#FFF'
 
   record.classList.add('record' ,'side')
