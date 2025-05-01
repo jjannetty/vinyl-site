@@ -481,11 +481,11 @@ h3 {
 
 
 .shelf-bottom-1 {
-  background: url(images/shelf-bottom-1.jpg);
+  background-image: url(images/shelf-bottom-1.jpg);
 }
 
 .shelf-bottom-2 {
-  background: url(images/shelf-bottom-2.jpg);
+  background-image: url(images/shelf-bottom-2.jpg);
 }
 
 .picture-frame-container {
