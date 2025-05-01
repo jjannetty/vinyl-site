@@ -20,10 +20,13 @@ html, body {
   background-color: white;
   margin: 0;
   padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 main {
-  background: url(images/pattern-2.svg);
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(images/pattern-2.svg);
+  background-blend-mode: darken;
   background-position: top center;
   box-shadow: inset 30px -26px 200px rgba(0, 0, 0, 0.25);
   display: grid;
@@ -67,6 +70,35 @@ main {
 .overlay-about {
   padding: 0 24rem;
   overflow-y: scroll;
+}
+
+.about-button {
+  color: white;
+  display: flex;
+    align-items: center;
+    gap: 8rem;
+    justify-content: center;
+  height: 48rem;
+  border-radius: 4rem;
+  background: rgba(255, 255, 255, 0.50);
+  padding: 0 24rem;
+  position: absolute;
+    right: 18rem;
+    top: 18rem;
+  text-decoration: none;
+  transition: letter-spacing 0.2s;
+  width: fit-content;
+  z-index: 99;
+}
+
+.about-button:hover {
+  cursor: pointer;
+  letter-spacing: 2rem;
+}
+
+.about-button.mobile {
+  background: none;
+  position: static;
 }
 
 .about-container {
@@ -164,11 +196,9 @@ main {
 }
 
 .blur {
-  background-size: 75%;
-  backdrop-filter: blur(0.4px);
-  -webkit-backdrop-filter: blur(0.4px);
+
   pointer-events: none;
-  position: absolute;
+  position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -177,15 +207,52 @@ main {
 }
 
 .logo.desktop-only {
-  margin: 0 16rem;
+  margin: 0 0;
   max-width: 364rem;
   position: relative;
   z-index: 99;
 }
 
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 5vw;
+  padding-right: 3vw;
+}
+
+.header h2 {
+  font-family: 'Albert Sans';
+  line-height: 145%;
+  margin-top: 32rem;
+  max-width: 450rem;
+  position: relative;
+  text-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.header-mobile {
+  background: black;
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 42rem;
+  font-size: 16rem;
+  padding: 90rem 32rem 130rem;
+  text-align: center;
+}
+
+.header-mobile h2 {
+  color: white;
+  font-family: 'Albert Sans';
+  font-size: 16rem;
+  line-height: 145%;
+  max-width: 450rem;
+}
+
 .content {
   align-self: end;
   color: #FFF;
+  width: 100%;
+  padding-left: 6vw;
 }
 
 h3 {
@@ -211,6 +278,7 @@ h3 {
   position: relative;
   z-index: 99;
   padding-bottom: 188rem;
+  width: 100%;
 }
 
 .spine {
@@ -256,6 +324,12 @@ h3 {
   width: var(--album-dimensions);
   left: 50%;
 }
+
+.album-name span {
+  font-family: 'Albert Sans';
+  font-size: 15rem;
+}
+
 .album {
   height: var(--album-dimensions);
   width: var(--album-spine-width);
@@ -392,7 +466,7 @@ h3 {
   background: url(images/shelf-side.jpg);
   background-size: cover;
   grid-column: 1 / span 1;
-  grid-row: 2 / span 3;
+  grid-row: 2 / span 4;
 }
 
 .shelf {
@@ -554,7 +628,7 @@ h3 {
 .word {
   animation-name: blink;
   animation-iteration-count: infinite;
-  animation-duration: 6s;
+  animation-duration: 9s;
   opacity: 0;
   position: absolute;
     top: 50%;
@@ -567,11 +641,35 @@ h3 {
 }
 
 .word-2 {
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
 }
 
 .word-3 {
+  animation-delay: 2.5s;
+}
+
+.word-4 {
+  animation-delay: 3.5s;
+}
+
+.word-5 {
   animation-delay: 4.5s;
+} 
+
+.word-6 {
+  animation-delay: 5.5s;
+}
+
+.word-7 {
+  animation-delay: 6.5s;
+}
+
+.word-8 {
+  animation-delay: 7.5s;
+}
+
+.word-9 {
+  animation-delay: 8.5s;
 }
 
 .about {
@@ -611,6 +709,11 @@ h3 {
   padding-left: 19rem;
 }
 
+.mobile-album-name span {
+  font-family: 'Albert Sans';
+  font-size: 15rem;
+}
+
 @media (max-width: 920px) {
   h3 {
     font-size: 20rem;
@@ -629,12 +732,12 @@ h3 {
   }
 
   main {
-    grid-template-columns: 18% 1fr;
+    grid-template-columns: 12vw 1fr;
     padding-top: 0;
+    overflow: visible;
   }
 
   .logo-mobile {
-    transform: rotate(-90deg) translate(-50%, 50%);
     width: 222rem;
     z-index: 999;
   }
@@ -695,15 +798,24 @@ h3 {
     height: 135rem;
   }
 
+  .record-player-clip {
+    height: 100rem;
+  }
+
+  .record-player-container {
+    overflow: visible;
+  }
+
   .record-player-wrapper {
     position: absolute;
       bottom: 0;
+      right: -20%;
     width: auto;
   }
 
   .record-player {
     padding-left: 60rem;
-    min-width: 430rem;
+    max-width: 530rem;
   }
 
   .partners {
@@ -885,7 +997,7 @@ h3 {
 
 @keyframes blink {
   0% { opacity: 1;}
-  33% { opacity: 1;}
-  33.33% { opacity: 0; }
+  11% { opacity: 1;}
+  12% { opacity: 0; }
   100% { opacity: 0; }
 }
