@@ -11,7 +11,7 @@ html, body {
 }
 
 
-main {
+.main {
   box-sizing: border-box;
   box-shadow: inset 20px 0 40px rgba(0,0,0,0.3);
   background: url(images/bio-background.svg), url(images/bio-background-3.jpg);
@@ -24,7 +24,7 @@ main {
   min-height: 100vh;
 }
 
-main::before {
+.main::before {
   display: block;
   content: '';
   background: url(images/bio-background-2.svg), url(images/bio-background-3.jpg);
@@ -60,6 +60,14 @@ h3 {
   margin: 0 0 12rem;
 }
 
+h4 {
+  font-weight: 700;
+  font-size: 16rem;
+  line-height: 1.45em;
+  margin: 0 0 12rem;
+  color: #39373A;
+}
+
 .arrow-button {
   color: #39373A;
   cursor: pointer;
@@ -91,6 +99,14 @@ h3 {
   padding: 16rem 0;
 }
 
+.header.portfolio {
+  display: flex;
+    align-items: center;
+  border-bottom: 0;
+  height: 80rem;
+  padding: 0 32rem;
+}
+
 .body {
   display: grid;
     grid-template-columns: minmax(auto, 300rem) 1fr;
@@ -98,6 +114,23 @@ h3 {
 
 .body-inner {
   padding: 20rem;
+}
+
+.body-inner.portfolio {
+  display: flex;
+    flex-direction: column;
+    gap: 48rem;
+  border-left: 1px solid #CADBDF;
+  padding: 0 40rem 40rem 40rem;
+  max-width: 1200rem;
+}
+
+.body-inner.portfolio h1 {
+ margin-bottom: 12rem;
+}
+
+.body-inner.portfolio p {
+  font-family: "Albert Sans";
 }
 
 .body-section {
@@ -143,6 +176,106 @@ li a:hover {
   letter-spacing: 2rem;
 }
 
+.partners {
+  border-top: 1px solid #CADBDF;
+  border-bottom: 1px solid #CADBDF;
+  display: flex;
+    gap: 48rem;
+  padding: 48rem 0;
+}
+
+.partner {
+  color: #39373A;
+  text-decoration: none;
+}
+
+.partner:hover .partner-name{
+  letter-spacing: 2rem;
+}
+
+.partner:hover .partner-image {
+  opacity: 1;
+}
+
+.partner-image {
+  max-width: 250rem;
+  opacity: 0.8;
+  width: 100%;
+  transition: opacity 0.15s;
+}
+
+.partner-name {
+  padding: 16rem 0 0;
+  margin: 0;
+  transition: letter-spacing 0.15s;
+}
+
+.partner-title {
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-main {
+  background-color: #FFF0C5;
+  padding-right: 160rem;
+}
+
+.portfolio-body {
+  display: grid;
+    grid-template-columns: auto 1fr;
+    border-radius: 0rem 40rem 0rem 0rem;
+  background: #FFF;
+  box-shadow: 30px 0px 0px 0px #CADBDF, 60px 0px 0px 0px #FCE1C6, 90px 0px 0px 0px #C8DEF1;
+  padding: 64rem 0;
+  width: 100%;
+}
+
+.portfolio-companies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.portfolio-company {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 128px 1fr;
+  gap: 32px;
+  text-decoration: none;
+  color: #39373A;
+}
+
+.portfolio-company-name {
+  transition: letter-spacing 0.2s;
+}
+
+.portfolio-company:hover .portfolio-company-name {
+  letter-spacing: 2rem;
+}
+
+.portfolio-company-logo {
+  border-radius: 4rem;
+  background: #FFF;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+  width: 128px;
+}
+
+.portfolio-company-description {
+  font-size: 14rem;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-logo-desktop {
+  display: block;
+  margin-right: 3vw;
+  width: 93px;
+}
+
+.portfolio-logo-mobile {
+  display: none;
+}
+
 .resume {
   border-left: 1px solid #39373A;
   max-width: 700rem;
@@ -164,6 +297,12 @@ li a:hover {
     display: grid;
       grid-template-columns: 100%;
   }
+  
+  .body-inner.portfolio {
+    border: none;
+    grid-template-columns: 1fr;
+    padding: 24rem;
+  }
 
   .image img {
     max-width: 300rem;
@@ -182,5 +321,36 @@ li a:hover {
 
   main::before {
     box-shadow: inset -10px 0 40px rgba(0,0,0,0.1);
+  }
+
+  .partners {
+    flex-direction: column;
+  }
+
+  .portfolio-body {
+    grid-template-columns: 1fr;
+    box-shadow: 2vw 0px 0px 0px #CADBDF, 4vw 0px 0px 0px #FCE1C6, 6vw 0px 0px 0px #C8DEF1;
+    padding-top: 0;
+  }
+
+  .portfolio-companies {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-company {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-logo-desktop {
+    display: none;
+  }
+  
+  .portfolio-logo-mobile {
+    display: block;
+  }
+
+  .portfolio-main {
+    box-shadow: none;
+    padding: 0 6vw 0 0;
   }
 }
