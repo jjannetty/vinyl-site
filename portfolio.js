@@ -130,7 +130,7 @@ export const portfolio = [
   },
     {
     name: "Quotient",
-    site: "#",
+    site: "https://www.getquotient.ai/",
     album: "images/albums/album-quotient.png",
     description: "",
     liquidEvent: false
