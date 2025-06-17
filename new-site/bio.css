@@ -176,6 +176,27 @@ li a:hover {
   letter-spacing: 2rem;
 }
 
+.liquid-event-pill {
+  border-radius: 10rem;
+  color: #39373A;
+  display: flex;
+    align-items: center;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 12rem;
+  height: 20rem;
+  margin-bottom: 2rem;
+  padding: 0 8rem;
+  width: fit-content;
+}
+
+.liquid-event-pill.IPO {
+  background-color: #C8DEF1;
+}
+
+.liquid-event-pill.Acquired {
+  background-color: #CADBDF;
+}
+
 .partners {
   border-top: 1px solid #CADBDF;
   border-bottom: 1px solid #CADBDF;
@@ -247,6 +268,7 @@ li a:hover {
 
 .portfolio-company-name {
   transition: letter-spacing 0.2s;
+  margin-bottom: 2rem;
 }
 
 .portfolio-company:hover .portfolio-company-name {
@@ -264,6 +286,12 @@ li a:hover {
   font-size: 14rem;
   margin: 0;
   padding: 0;
+}
+
+.portfolio-company-details {
+  display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .portfolio-logo-desktop {

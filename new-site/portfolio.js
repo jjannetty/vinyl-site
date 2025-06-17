@@ -3,7 +3,7 @@ export const portfolio = [
     name: "AI Growth Labs",
     site: "https://aigrowthlabs.com/",
     album: "images/albums/album-ai-growth-labs.png",
-    description: "Luanch coming soon...",
+    description: "Launch coming soon...",
     liquidEvent: false
   },
   {
@@ -40,6 +40,7 @@ export const portfolio = [
     album: "images/albums/album-factored-quality.png",
     description: "International quality control",
     liquidEvent: true,
+    liquidEventType: "Acquired",
     eventText: "Acquired by Pietra"
   },
   // {
@@ -83,6 +84,7 @@ export const portfolio = [
     album: "images/albums/album-klaviyo.png",
     description: "Sales & marketing automation",
     liquidEvent: true,
+    liquidEventType: "IPO",
     eventText: "NYSE: KVYO"
   },
   {
@@ -112,6 +114,7 @@ export const portfolio = [
     album: "images/albums/album-peel.png",
     description: "Automated commerce BI",
     liquidEvent: true,
+    liquidEventType: "Acquired",
     eventText: "Acquired by Shopify"
   },
   {
@@ -141,6 +144,7 @@ export const portfolio = [
     album: "images/albums/album-reactive.png",
     description: "Live shopping infrastructure",
     liquidEvent: true,
+    liquidEventType: "Acquired",
     eventText: "Acquired by Postscript"
   },
   {
@@ -149,6 +153,7 @@ export const portfolio = [
     album: "images/albums/album-repeat.png",
     description: "Digital subscription management",
     liquidEvent: true,
+    liquidEventType: "Acquired",
     eventText: "Acquired by TINY"
   },
   {
@@ -211,14 +216,14 @@ export const portfolio = [
     name: "Typeface",
     site: "https://www.typeface.ai/",
     album: "images/albums/album-typeface.png",
-    description: "AI-powered design tools",
+    description: "AI powered content experiences",
     liquidEvent: false
   },
   {
     name: "Xeno",
     site: "https://getxeno.com/",
     album: "images/albums/album-xeno.png",
-    description: "India’s Retail CRM",
+    description: "India's Retail CRM",
     liquidEvent: false
   }
 ];

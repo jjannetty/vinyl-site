@@ -35,6 +35,7 @@ function renderPortfolio() {
     companyLink.innerHTML = `
       <img class="portfolio-company-logo" alt="${company.name}" src="${logoSrc}">
       <div class="portfolio-company-details">
+        ${ company.liquidEvent ? `<div class="liquid-event-pill ${company.liquidEventType}">${company.liquidEventType}</div>` : ''}
         <h4 class="portfolio-company-name">${company.name}</h4>
         <p class="portfolio-company-description">${company.description}</p>
       </div>
