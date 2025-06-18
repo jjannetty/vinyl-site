@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Unbounded:wght@500;700&family=Mynerve&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Unbounded:wght@500;700&family=Mynerve&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="footer.css">
   <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2C068Z50Z1"></script>
@@ -23,11 +24,23 @@
   <script type="module" src="scripts.js"></script>
 </head>
 <body>
+  <div class="header-mobile mobile-only-flex">
+    <img class="logo-mobile" src="images/vinyl_logo.svg" alt="Vinyl Logo">
+    <h2>
+      A formation stage fund focused on commerce infrastructure - the system and solutions that will power tomorrow's economy.
+    </h2>
+    <a class="about-button mobile" href="portfolio/"><img src="images/record-icon.svg">About Us</a>
+  </div>
   <main class="main">
-    <div class="blur"></div>
     <div class="grain"></div>
-    <img class="logo logo-desktop desktop-only" src="images/vinyl_logo.svg" alt="Vinyl Logo">
-    <img class="logo-mobile  mobile-only-block" src="images/vinyl_logo.svg" alt="Vinyl Logo">
+    <a class="about-button desktop-only" href="portfolio/"><img src="images/record-icon.svg">About Us</a>
+    <div class="header desktop-only">
+      <img class="logo logo-desktop desktop-only" src="images/vinyl_logo.svg" alt="Vinyl Logo">
+      <h2>
+        A formation stage fund focused on commerce infrastructure - the system and solutions that will power tomorrow's economy.
+      </h2>
+    </div>
+    <div class="mobile-only-block"></div>
     <div class="record-player-container">
       <div class="record-player-clip">
         <div class="record-player-wrapper">
@@ -35,9 +48,15 @@
           <img class="power-light pulse desktop-only" src="images/power-light.svg" />
           <div class="power-button desktop-only" onmouseenter="handleAboutHover()" onmouseleave="handleAboutHover()" onclick="toggleAbout()"></div>
           <div class="record-player-text desktop-only">
-            <span class="player-text word word-1">THE FUTURE</span>
-            <span class="player-text word word-2">OF BUYING</span>
-            <span class="player-text word word-3">THINGS</span>
+            <span class="player-text word word-1">PRE-REVENUE</span>
+            <span class="player-text word word-2">PRE-PRODUCT</span>
+            <span class="player-text word word-3">OFTEN</span>
+            <span class="player-text word word-4">PRE-DBA</span>
+            <span class="player-text word word-5">IT'S NEVER</span>
+            <span class="player-text word word-6">TOO EARLY</span>
+            <span class="player-text word word-7">TO JAM WITH</span>
+            <span class="player-text word word-8">VINYL</span>
+            <span class="player-text word word-9"></span>
             <span class="player-text about hide">ABOUT</span>
           </div>
         </div>
@@ -56,6 +75,14 @@
       <div class="shelves-side"></div>
       <div class="shelf">
         <div class="container">
+          <div class="mobile-albums"></div>
+          <div class="overlay overlay-album">
+          </div>
+        </div>
+        <div class="shelf-bottom shelf-bottom-1"></div>
+      </div>
+      <div class="shelf">
+        <div class="container liquid-events">
           <div class="mobile-albums"></div>
           <div class="overlay overlay-album">
           </div>
@@ -116,6 +143,9 @@
       </div>
     </div>
   </div>
+  <footer>
+    <a href="/faq/">FAQs</a>
+  </footer>
   <script type="text/javascript">
     window.onload = (event) => {
       albums();

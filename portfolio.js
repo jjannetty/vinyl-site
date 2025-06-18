@@ -3,7 +3,7 @@ export const portfolio = [
     name: "AI Growth Labs",
     site: "https://aigrowthlabs.com/",
     album: "images/albums/album-ai-growth-labs.png",
-    description: "AI-driven business scaling solutions",
+    description: "Launch coming soon...",
     liquidEvent: false
   },
   {
@@ -17,7 +17,7 @@ export const portfolio = [
     name: "Blue Onion",
     site: "https://www.blueonionlabs.com/",
     album: "images/albums/album-blue-onion.png",
-    description: "Automated financial ledger",
+    description: "Automated daily sub-ledger",
     liquidEvent: false
   },
   {
@@ -40,6 +40,7 @@ export const portfolio = [
     album: "images/albums/album-factored-quality.png",
     description: "International quality control",
     liquidEvent: true,
+    liquidEventType: "Acquired",
     eventText: "Acquired by Pietra"
   },
   // {
@@ -53,7 +54,7 @@ export const portfolio = [
     name: "Faro",
     site: "https://www.faro.co/",
     album: "images/albums/album-faro.png",
-    description: "Global apparel upcycling",
+    description: "Excess inventory solution",
     liquidEvent: false
   },
   {
@@ -83,20 +84,21 @@ export const portfolio = [
     album: "images/albums/album-klaviyo.png",
     description: "Sales & marketing automation",
     liquidEvent: true,
+    liquidEventType: "IPO",
     eventText: "NYSE: KVYO"
   },
   {
     name: "Koverly",
     site: "https://www.koverly.com/",
     album: "images/albums/album-koverly.png",
-    description: "Cross border lending",
+    description: "Financing and cross-border payments for global trade",
     liquidEvent: false
   },
   {
     name: "LightLabs",
     site: "https://www.lightlabs.com/",
     album: "images/albums/album-lightlabs.png",
-    description: "CPG ingredient testing",
+    description: "CPG lab testing infrastructure",
     liquidEvent: false
   },
   {
@@ -110,8 +112,9 @@ export const portfolio = [
     name: "Peel",
     site: "https://www.peelinsights.com/",
     album: "images/albums/album-peel.png",
-    description: "Automated ecomm analytics",
+    description: "Automated commerce BI",
     liquidEvent: true,
+    liquidEventType: "Acquired",
     eventText: "Acquired by Shopify"
   },
   {
@@ -128,13 +131,6 @@ export const portfolio = [
     description: "SMS marketing automation",
     liquidEvent: false
   },
-    {
-    name: "Quotient",
-    site: "https://www.getquotient.ai/",
-    album: "images/albums/album-quotient.png",
-    description: "",
-    liquidEvent: false
-  },
   {
     name: "Rain",
     site: "https://www.raincards.xyz/",
@@ -147,7 +143,9 @@ export const portfolio = [
     site: "https://www.reactive.live/",
     album: "images/albums/album-reactive.png",
     description: "Live shopping infrastructure",
-    liquidEvent: false
+    liquidEvent: true,
+    liquidEventType: "Acquired",
+    eventText: "Acquired by Postscript"
   },
   {
     name: "Repeat",
@@ -155,13 +153,14 @@ export const portfolio = [
     album: "images/albums/album-repeat.png",
     description: "Digital subscription management",
     liquidEvent: true,
+    liquidEventType: "Acquired",
     eventText: "Acquired by TINY"
   },
   {
     name: "Sequen",
     site: "https://www.sequen.ai/",
     album: "images/albums/album-sequen.png",
-    description: "Search and personalization",
+    description: "Behavior design engine for search and personalization",
     liquidEvent: false
   },
   {
@@ -169,8 +168,7 @@ export const portfolio = [
     site: "https://www.skipify.com/",
     album: "images/albums/album-skipify.png",
     description: "One click payments",
-    liquidEvent: true,
-    eventText: "Acquired by Shopify"
+    liquidEvent: false,
   },
   {
     name: "Starday",
@@ -211,21 +209,21 @@ export const portfolio = [
     name: "Two Boxes",
     site: "https://www.twoboxes.com/",
     album: "images/albums/album-two-boxes.png",
-    description: "Reverse logistics software",
+    description: "Reverse logistics platform",
     liquidEvent: false
   },
   {
     name: "Typeface",
     site: "https://www.typeface.ai/",
     album: "images/albums/album-typeface.png",
-    description: "AI-powered design tools",
+    description: "AI powered content experiences",
     liquidEvent: false
   },
   {
     name: "Xeno",
     site: "https://getxeno.com/",
     album: "images/albums/album-xeno.png",
-    description: "India’s Retail CRM",
+    description: "India's Retail CRM",
     liquidEvent: false
   }
 ];
