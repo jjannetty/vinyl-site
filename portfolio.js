@@ -132,6 +132,13 @@ export const portfolio = [
     liquidEvent: false
   },
   {
+    name: "Quotient",
+    site: "https://www.getquotient.ai/",
+    album: "images/albums/album-quotient.png",
+    description: "Email marketing AI agents",
+    liquidEvent: false
+  },
+  {
     name: "Rain",
     site: "https://www.raincards.xyz/",
     album: "images/albums/album-rain.png",
