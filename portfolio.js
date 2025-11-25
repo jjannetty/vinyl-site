@@ -72,6 +72,13 @@ export const portfolio = [
     liquidEvent: false
   },
   {
+    name: "Govra",
+    site: "https://www.govra.com/",
+    album: "images/albums/album-govra.png",
+    description: "AI Agents for government operations",
+    liquidEvent: false
+  },
+  {
     name: "Intelligems",
     site: "https://www.intelligems.io/",
     album: "images/albums/album-intelligems.png",
@@ -176,6 +183,13 @@ export const portfolio = [
     album: "images/albums/album-skipify.png",
     description: "One click payments",
     liquidEvent: false,
+  },
+  {
+    name: "Snoots",
+    site: "http://snootsvet.com/",
+    album: "images/albums/album-snoots.png",
+    description: "Unlimited primary vet care",
+    liquidEvent: false
   },
   {
     name: "Starday",
