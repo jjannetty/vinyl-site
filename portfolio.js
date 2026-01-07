@@ -113,7 +113,8 @@ export const portfolio = [
     site: "https://www.paylode.com/",
     album: "images/albums/album-paylode.png",
     description: "Loyalty program management",
-    liquidEvent: false
+    liquidEvent: true,
+    eventText: "Acquired by Moved"
   },
   {
     name: "Peel",
