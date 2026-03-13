@@ -34,13 +34,13 @@ export const portfolio = [
     description: "Strategic finance platform",
     liquidEvent: false
   },
-  {
-    name: "Entendre",
-    site: "https://entendre.finance/",
-    album: "images/albums/album-entendre.png",
-    description: "AI accounting team",
-    liquidEvent: false,
-  },
+  // {
+  //   name: "Entendre",
+  //   site: "https://entendre.finance/",
+  //   album: "images/albums/album-entendre.png",
+  //   description: "AI accounting team",
+  //   liquidEvent: false,
+  // },
   {
     name: "Factored Quality",
     site: "https://www.factoredquality.com/",
