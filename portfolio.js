@@ -28,6 +28,13 @@ export const portfolio = [
     liquidEvent: false
   },
   {
+    name: "Dalton Mills",
+    site: "https://daltonmills.com/",
+    album: "images/albums/album-dalton-mills.png",
+    description: "Operating system for trades",
+    liquidEvent: false
+  },
+  {
     name: "Drivepoint",
     site: "https://www.drivepoint.io/",
     album: "images/albums/album-drivepoint.png",
