@@ -31,15 +31,25 @@ function renderPortfolio() {
     companyLink.classList.add("portfolio-company");
     companyLink.target = "_blank"; // Opens link in a new tab
 
+    // Build logo img with fallback
+    const defaultLogoSrc = `../images/portfolio/logo-default.png`;
+    const logoImg = document.createElement("img");
+    logoImg.classList.add("portfolio-company-logo");
+    logoImg.alt = company.name;
+    logoImg.src = logoSrc;
+    logoImg.onerror = () => { logoImg.src = defaultLogoSrc; };
+
     // Populate inner HTML
-    companyLink.innerHTML = `
-      <img class="portfolio-company-logo" alt="${company.name}" src="${logoSrc}">
-      <div class="portfolio-company-details">
-        ${ company.liquidEvent ? `<div class="liquid-event-pill ${company.liquidEventType}">${company.liquidEventType}</div>` : ''}
-        <h4 class="portfolio-company-name">${company.name}</h4>
-        <p class="portfolio-company-description">${company.description}</p>
-      </div>
+    const detailsDiv = document.createElement("div");
+    detailsDiv.classList.add("portfolio-company-details");
+    detailsDiv.innerHTML = `
+      ${ company.liquidEvent ? `<div class="liquid-event-pill ${company.liquidEventType}">${company.liquidEventType}</div>` : ''}
+      <h4 class="portfolio-company-name">${company.name}</h4>
+      <p class="portfolio-company-description">${company.description}</p>
     `;
+
+    companyLink.appendChild(logoImg);
+    companyLink.appendChild(detailsDiv);
 
     // Append to portfolio container
     portfolioContainer.appendChild(companyLink);
