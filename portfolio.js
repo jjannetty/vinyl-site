@@ -178,6 +178,13 @@ export const portfolio = [
     eventText: "Acquired by Postscript"
   },
   {
+    name: "Refine",
+    site: "https://www.refine.ink/",
+    album: "images/albums/album-refine.avif",
+    description: "AI verification trusted by world-class experts",
+    liquidEvent: false
+  },
+  {
     name: "Repeat",
     site: "https://www.getrepeat.io/",
     album: "images/albums/album-repeat.avif",
