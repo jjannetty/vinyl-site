@@ -93,6 +93,13 @@ export const portfolio = [
     liquidEvent: false
   },
   {
+    name: "Inherence",
+    site: "https://www.inherence.dev/",
+    album: "images/albums/album-inherence.avif",
+    description: "Proof of conduct for AI in finance",
+    liquidEvent: false
+  },
+  {
     name: "Intelligems",
     site: "https://www.intelligems.io/",
     album: "images/albums/album-intelligems.avif",
